@@ -26,10 +26,8 @@ public:
     vector<int> inorderTraversal(TreeNode* root) {
         
         vector<int> ans;
-
         inorderTrav(root,ans);
-    
-    return ans;
+        return ans;
     }
     
 };

@@ -71,7 +71,7 @@ private:
         left++;
     }
 
-    //  if elements on the right half are still left //
+    // if elements on the right half are still left //
     while (right <= high) {
         temp.push_back(arr[right]);
         right++;
@@ -79,7 +79,7 @@ private:
 
     // transfering all elements from temporary to arr //
     for (int i = low; i <= high; i++) {
-        arr[i] = temp[i - low];
+         arr[i] = temp[i - low];
     }
 }
 

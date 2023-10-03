@@ -7,22 +7,25 @@ public:
    int left = m-1; //last element of arr1
    int right = 0; //first element of arr2
 
-   while(left >= 0 && right < n){
-            if(nums1[left] > nums2[right]){
+   while(left >= 0 && right < n)
+   {
+            if(nums1[left] > nums2[right])
+            {
                 swap(nums1[left], nums2[right]);
                 left--;
                 right++;
             }
-            else{
+            else 
                 break;
-            }
-        }
-        sort(nums1.begin(), nums1.begin()+m); // Sorting till mth index
-        sort(nums2.begin(), nums2.end());
+    }
+        
+    sort(nums1.begin(), nums1.begin()+m); // Sorting till mth index
+    sort(nums2.begin(), nums2.end());
 
-       for(int i=m; i<m+n; i++){
+    for(int i=m; i<m+n; i++)
+    {
             nums1[i] = nums2[i-m];
-        }
+    }
    
         
        /* 

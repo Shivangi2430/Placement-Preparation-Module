@@ -4,6 +4,7 @@ class Solution {
     int largestRectangleArea(vector < int > & heights) {
       int n = heights.size();
       stack < int > st;
+      
       int leftsmall[n], rightsmall[n];
         
       for (int i = 0; i < n; i++)

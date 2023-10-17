@@ -1,7 +1,7 @@
 class Solution {
 public:
     
-        bool isPalin(string s, int left, int right) {
+    bool isPalin(string s, int left, int right) {
 	    
         while (left < right) 
         {
@@ -17,7 +17,7 @@ public:
 	    return true;
       }
     
-        bool validPalindrome(string s) {
+    bool validPalindrome(string s) {
             
 	    int left = 0, right = s.length() - 1;
 	    while (left < right) 

@@ -37,7 +37,8 @@ public:
         
         /* TC = O(2n)  SC = O(1)
         
-         if(head==NULL){
+       if(head==NULL)
+        {
             return head;
         }
         ListNode* ptr=head;
@@ -55,13 +56,15 @@ public:
         n=count-n-1;
         count=0;
         
-        while(ptr){
-            if(count==n){
+        while(ptr)
+        {
+            if(count==n)
+            {
                 ptr->next=ptr->next->next;
             }
             count++;
             ptr=ptr->next;
         }
         return head;
-        */
+    }};*/
   

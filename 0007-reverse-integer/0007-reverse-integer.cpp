@@ -8,7 +8,7 @@ public:
     {
         if (res > INT32_MAX / 10 || res < INT32_MIN / 10)
                 return 0;
-        res = res*10 + x%10;;
+        res = res*10 + x%10;
         x = x/10;
     }
     

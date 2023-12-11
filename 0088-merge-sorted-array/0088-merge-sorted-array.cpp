@@ -22,7 +22,7 @@ public:
     sort(nums1.begin(), nums1.begin()+m); // Sorting till mth index
     sort(nums2.begin(), nums2.end());
 
-    for(int i=m; i<m+n; i++)
+    for(int i = m; i < m + n; i++)
     {
             nums1[i] = nums2[i-m];
     }

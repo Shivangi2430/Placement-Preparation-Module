@@ -1,6 +1,5 @@
 /*
-
-    Time Complexity : O(N^2), where N is the size of the array. As we check for possible pair which can satisfy
+    Time Complexity : O(N^2), where N is the size of the array. As we check for possible pair which can       satisfy
     the given condition, and the total number of pairs are : N*(N–1)/2.
 
     Space complexity : O(1), Constant space.
@@ -8,12 +7,11 @@
     Solved Using Array(Two Nested Loop). Brute Force Approach.
 
     Note : This approach is Giving TLE.
-
 */
 
+/***************************************** Approach 1 *****************************************/
 
-/*                                                               Approach 1 
-
+/*
 class Solution {
 public:
     int reversePairs(vector<int>& nums) {
@@ -32,17 +30,15 @@ public:
 
 */
 
-/*
+/***************************************** Approach 2 *****************************************/
 
+
+/*
     Time Complexity : O(2NlogN)
     Space Complexity : O(N), Recursion Stack Space O(logN) + Array(temp) space O(N). 
 
     Solved using Array + Divide and Conquer + Merge Sort. Optimized Approach.
-
-
-
-
-/***************************************** Approach 2 *****************************************/
+*/
 
 class Solution {
 private: 
@@ -87,8 +83,10 @@ int countPairs(vector<int> &arr, int low, int mid, int high) {
     int right = mid + 1;
     int count = 0;
     for (int i = low; i <= mid; i++) {  //from left array to right array and from low to mid in left array
-        while (right <= high && arr[i] > (long long)2 * arr[right])  //checks in right array from right to high
-        right++;
+        while (right <= high && arr[i] > (long long)2 * arr[right])  //checks in right array from right to         high
+        {
+           right++;
+        }
         count += (right - (mid + 1));
     }
     return count;

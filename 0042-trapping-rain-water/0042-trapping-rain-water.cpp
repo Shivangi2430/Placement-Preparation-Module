@@ -2,7 +2,7 @@ class Solution {
 public:
     int trap(vector<int>& height) {
         
-        //TC = O(n) + O(n) + O(n) = O(3n) = O(n)
+        //TC = O(n) + O(n) + O(n) = O(3n)
         //SC = O(n) + O(n) = O(2n)
         
         int n = height.size();

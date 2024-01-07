@@ -8,6 +8,9 @@ public:
          if(num.length() <= k)   
             return "0";
         
+         if(k == num.size())
+            return "0";
+        
          if(k == 0)
             return num;
         
@@ -21,14 +24,14 @@ public:
             }
         
          // as leading zeroes are to be avoided skip pushing to stack
-         if(st.empty()&& c == '0')
+         if(st.empty() && c == '0')
              continue;
             
          st.push(c);
             
          }
     
-        // after iterating if some k is still not 0 we can pop from back. 456 case
+        // after iterating if some k is still not 0 we can pop from back. 456780 case
          while(k-- && !st.empty())
            st.pop();
         

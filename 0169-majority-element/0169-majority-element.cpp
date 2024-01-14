@@ -25,8 +25,8 @@ public:
         else cnt--;
     }
 
-    //checking if the stored element
-    // is the majority element:
+    //checking if the stored majority element
+    // is having size >n/2 or not:
     int cnt1 = 0;
         
     for (int i = 0; i < n; i++)

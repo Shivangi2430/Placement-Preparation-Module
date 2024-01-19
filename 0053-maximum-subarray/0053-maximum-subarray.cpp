@@ -12,10 +12,12 @@ public:
 
         sum += nums[i];
 
-        if (sum > maxi) {
+        maxi = max(sum, maxi);
+        
+       /* if (sum > maxi) {
             maxi = sum;
         }
-
+        */
         // If sum < 0: discard the sum calculated
         if (sum < 0) {
             sum = 0;

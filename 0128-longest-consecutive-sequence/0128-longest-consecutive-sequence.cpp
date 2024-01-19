@@ -38,10 +38,10 @@ public:
     for (int i = 0; i < n; i++) {
         st.insert(nums[i]);
     }
-
+    //set stores only unique element
     //Find the longest sequence:
     for (auto it : st) {
-        //if 'it' is a starting number:
+        //if 'it' is a starting number: the previous element should not be in the set
         if (st.find(it - 1) == st.end()) {
             //find consecutive numbers:
             int cnt = 1;

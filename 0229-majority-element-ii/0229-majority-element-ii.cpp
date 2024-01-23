@@ -2,56 +2,56 @@ class Solution {
 public:
     vector<int> majorityElement(vector<int>& nums) {
       
-        vector<int>ans;
-        int count1 = 0, count2 = 0;
-        int element1, element2;
-        
-        for(int i = 0; i < nums.size(); i++)
-        {
-            if(count1 == 0 && nums[i] != element2)
-            {
-                element1 = nums[i];
+        int count1 = 0, count2 = 0; // Counters for the potential majority elements
+        int candidate1 = 0, candidate2 = 0; // Potential majority element candidates
+
+        // First pass to find potential majority elements.
+        for (int i = 0; i < nums.size(); i++) {
+            // If count1 is 0 and the current number is not equal to candidate2, update candidate1.
+            if (count1 == 0 && nums[i] != candidate2) {
                 count1 = 1;
-            }
-            
-            else if(count2 == 0 && nums[i] != element1)
-            {
-                element2 = nums[i];
+                candidate1 = nums[i];
+            } 
+            // If count2 is 0 and the current number is not equal to candidate1, update candidate2.
+            else if (count2 == 0 && nums[i] != candidate1) {
                 count2 = 1;
-            }
-                
-            else if(element1 == nums[i])
+                candidate2 = nums[i];
+            } 
+            // Update counts for candidate1 and candidate2.
+            else if (candidate1 == nums[i]) {
                 count1++;
-            
-            else if(element2 == nums[i])
+            } else if (candidate2 == nums[i]) {
                 count2++;
-            
-            else
-            {
+            } 
+            // If the current number is different from both candidates, decrement their counts.
+            else {
                 count1--;
                 count2--;
             }
         }
-        
-        count1 = 0;
-        count2 = 0;
-        
-        for(int i = 0; i < nums.size(); i++)
-        {
-            if(nums[i ] == element1)
+
+        vector<int> result;
+        int threshold = nums.size() / 3; // Threshold for majority element
+
+        // Second pass to count occurrences of the potential majority elements.
+        count1 = 0, count2 = 0;
+        for (int i = 0; i < nums.size(); i++) {
+            if (candidate1 == nums[i]) {
                 count1++;
-            
-            if(nums[i ] == element2)
+            } else if (candidate2 == nums[i]) {
                 count2++;
+            }
         }
-        
-        if(count1 > (nums.size()/3))
-            ans.push_back(element1);
-        
-        if(count2 > (nums.size()/3))
-            ans.push_back(element2);
-         
-    return ans;
+
+        // Check if the counts of potential majority elements are greater than n/3 and add them to the result.
+        if (count1 > threshold) {
+            result.push_back(candidate1);
+        }
+        if (count2 > threshold) {
+            result.push_back(candidate2);
+        }
+
+        return result;
         
         /* TC = O(n)
            SC = O(n)

@@ -1,9 +1,12 @@
 class Solution {
 public:
     int subarraySum(vector<int>& nums, int k) {
-     
+
+    //TC = O(N) + O(logN)
+    //SC = O(N)
+        
     unordered_map<int,int>mpp;
-    mpp[0] = 1; // Setting 0 in the map.
+    mpp[0] = 1; // Setting 0 in the map
     int prefixSum = 0;
     int count = 0;
 
@@ -22,6 +25,6 @@ public:
     }
 
     return count;
-
+        
     }
 };

@@ -13,6 +13,7 @@ public:
     ListNode* middleNode(ListNode* head) {
         
         
+
         // TC = O(n)
         // SC = O(1)
         
@@ -28,36 +29,24 @@ public:
          return slow;
 
         
-/*        
-<--------------------------------------------2nd approach------------------------------------------------>
-
-		 to calculate the length of the linked list
-        int size = 0;
-        
-		// taking a copy of head
-        ListNode* temp = head;
-        
-		// traversing it to get the length of the linked list
-        while (temp) {
-            size++;
-            temp = temp -> next;
-        }
-        
-		// storing the length in another variable
-        int original_size = size;
-        
-		// taking the half of the original length
-        int half = size / 2;
-        
-        while (head) {
-            if ((original_size % 2 == 0 && size == half) || (original_size % 2 != 0 && size - 1 == half)) {
-                break;
-            }
-            head = head -> next;
-            size--;
-        }
-        
-        return head;
+ 
+/*
+      
+<--------------------------------------------2nd approach------------------------------------------------> 
+		int n = 0;
+    	ListNode* temp = head;
+    	while(temp) {
+        	n++;
+        	temp = temp->next;
+    	}
+   	 
+    	temp = head;
+   	 
+    	for(int i = 0; i < n / 2; i++) {
+        		temp = temp->next;
+    	}
+   	 
+    	return temp;
 */
     }
 };

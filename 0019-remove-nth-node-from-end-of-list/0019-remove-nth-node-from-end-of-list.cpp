@@ -19,8 +19,10 @@ public:
         ListNode* slow = dummy;
         ListNode* fast = dummy;
         
-        for(int i = 1; i <= n; ++i)
-            fast = fast->next;
+        for(int i = 1; i <= n; i++)
+        {
+            fast = fast->next;   
+        }
         
         while(fast->next != NULL)
         {
@@ -33,7 +35,7 @@ public:
                   
    }
 };       
-        
+       
         
         /* TC = O(2n)  SC = O(1)
         
@@ -66,5 +68,5 @@ public:
             ptr=ptr->next;
         }
         return head;
-    }};*/
-  
+    }}; 
+*/  

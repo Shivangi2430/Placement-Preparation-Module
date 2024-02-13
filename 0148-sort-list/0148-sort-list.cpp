@@ -13,9 +13,9 @@ public:
   
     ListNode* findMid(ListNode* head) {
     ListNode* slow = head;
-    ListNode* fast = head -> next;
+    ListNode* fast = head;
     
-    while(fast != NULL && fast -> next != NULL) {
+    while(fast->next != NULL && fast->next->next != NULL) {
         slow = slow -> next;
         fast = fast -> next -> next; 
     }

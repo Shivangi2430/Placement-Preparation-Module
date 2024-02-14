@@ -16,15 +16,19 @@ public:
         
         if(head == NULL || head->next == NULL || k == 0)
             return head;
+        
         ListNode* curr = head;
         int len = 1;
+        
         while(curr->next !=  NULL)
         {
-            len++;
+            len++;           //count the length of the ll
             curr = curr->next;
         }
-        curr->next = head; 
-        k = k%len;
+        
+        curr->next = head; //last node points to the head
+        
+        k = k%len;   //when k is more than the length of the ll
         k = len - k;
         
         while(k--)

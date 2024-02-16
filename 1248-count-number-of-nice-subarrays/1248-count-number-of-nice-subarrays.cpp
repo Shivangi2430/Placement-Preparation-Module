@@ -20,7 +20,7 @@ public:
                 left++;
             }
             
-            result += right - left + 1;
+            result = result + (right - left + 1);
             right++;
         }
         return result;

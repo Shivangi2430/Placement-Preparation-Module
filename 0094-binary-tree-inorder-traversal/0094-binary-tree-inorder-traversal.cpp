@@ -20,11 +20,10 @@ public:
            inorderTrav(curr->left,ans);
            ans.push_back(curr->val);
            inorderTrav(curr->right,ans);
-
- }
+ 
+   }
 
     vector<int> inorderTraversal(TreeNode* root) {
-        
         vector<int> ans;
         inorderTrav(root,ans);
         return ans;

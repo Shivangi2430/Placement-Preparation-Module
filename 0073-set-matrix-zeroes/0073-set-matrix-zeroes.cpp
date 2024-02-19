@@ -5,16 +5,16 @@ public:
       //TC = O(2*N*M)
       //SC = O(N) + O(M)
 
-      int m = matrix.size();
-      int n = matrix[0].size();
+      int n = matrix.size();
+      int m = matrix[0].size();
       
 
-      vector<int> row(m);
-      vector<int> col(n);
+      vector<int> row(n);
+      vector<int> col(m);
 
-      for(int i=0;i<m;i++)
+      for(int i=0;i<n;i++)
       {
-          for(int j=0;j<n;j++)
+          for(int j=0;j<m;j++)
           {
               if(matrix[i][j]==0)
               {
@@ -24,9 +24,9 @@ public:
           }
       }
 
-      for(int i=0;i<m;i++)
+      for(int i=0;i<n;i++)
       {
-          for(int j=0;j<n;j++)
+          for(int j=0;j<m;j++)
           {
               if(row[i] || col[j])
               {

@@ -23,7 +23,7 @@ public:
             odd->next = even->next;
             odd = odd->next;
             even->next = odd->next;
-            even = odd->next;
+            even = even->next;
         }
         odd->next = evenStart;
         return head;

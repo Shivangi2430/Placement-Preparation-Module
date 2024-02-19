@@ -1,7 +1,7 @@
 class Solution {
 public:
     int longestConsecutive(vector<int>& nums) {
-     /*   int last_ele = INT_MIN;
+     /* int last_ele = INT_MIN;
         int count = 0;
         int longest = 1;
         
@@ -40,16 +40,20 @@ public:
     }
     //set stores only unique element
     //Find the longest sequence:
-    for (auto it : st) {
+    for (auto it : st) 
+    {
         //if 'it' is a starting number: the previous element should not be in the set
-        if (st.find(it - 1) == st.end()) {
+        if (st.find(it - 1) == st.end()) 
+        {
             //find consecutive numbers:
             int cnt = 1;
             int x = it;
-            while (st.find(x + 1) != st.end()) {
+            while (st.find(x + 1) != st.end())
+            {
                 x = x + 1;
                 cnt = cnt + 1;
             }
+            
             longest = max(longest, cnt);
         }
     }

@@ -18,7 +18,7 @@ public:
                 {
                     st.pop();
                 }
-                else
+                else  //sum = 0
                 {
                     st.pop();
                     it = 0;

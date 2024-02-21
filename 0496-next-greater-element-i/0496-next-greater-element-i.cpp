@@ -18,10 +18,10 @@ Overall, the algorithm has a linear time complexity of O(N+M) and a linear space
         for(int i = nums2.size()-1; i>=0; i--)
         {
             while(!st.empty()  &&  nums2[i] >= st.top())
-                st.pop();
+                st.pop(); //pop all the lesser values from the stack
             
             if(st.empty())
-                ump[nums2[i]] = -1;
+                ump[nums2[i]] = -1;  //if stack gets empty put -1 in ump
             
             else
                 ump[nums2[i]] = st.top();

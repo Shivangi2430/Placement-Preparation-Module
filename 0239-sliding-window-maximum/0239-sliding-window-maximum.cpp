@@ -7,7 +7,9 @@ public:
         
          deque < int > dq;
          vector < int > ans;
-         for (int i = 0; i < nums.size(); i++) {
+         for (int i = 0; i < nums.size(); i++)
+         {
+             
          if (!dq.empty() && dq.front() == i - k) //i-k element will be the out of bound element
              dq.pop_front();
 
@@ -17,7 +19,7 @@ public:
          dq.push_back(i);
          if (i >= k - 1) ans.push_back(nums[dq.front()]);
              
-      }
+         }
         return ans;
     }
 };

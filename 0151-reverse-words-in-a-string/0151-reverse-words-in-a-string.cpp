@@ -19,18 +19,18 @@ public:
              s[r++] = s[i++];  // i ne r ko jo bhi string encounter hua use assign kar diya
          }
              //jaise hi space encounter kiya i ne tab l se leke r tak ke string reverse ho jayenge
-            if(l < r)  // l.......r   
+           if(l < r)  // l.......r   
            {
              reverse(s.begin() + l, s.begin() + r);
-            // ab l jo hai r ke pass aa jayega
-             s[r] = ' ';
+             s[r] = ' '; // r ab apne pass ek space assign krlega
              r++;
+             // ab l jo hai r ke pass aa jayega
              l = r;
            }
         i++;
      }
            // ek extra space bach jayega last me isliye use remove kr denge
-         s = s.substr(0, r-1); // (star index, length)
+         s = s.substr(0, r-1); // (star index, length(kitna length chahiye))
 
          return s;
     }
